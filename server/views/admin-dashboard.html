@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin | Pandu Cleaning Services</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%230fa3a0'/%3E%3Cpath d='M50 20l7 18 18 7-18 7-7 18-7-18-18-7 18-7z' fill='white'/%3E%3C/svg%3E">
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/admin.css">
+<meta name="csrf-token" content="<!--{{CSRF}}-->">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__brand">
+    <span class="login-mark login-mark--sm">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z" fill="currentColor"/>
+      </svg>
+    </span>
+    <span>
+      <b>Pandu Cleaning</b>
+      <small>Admin panel</small>
+    </span>
+  </div>
+
+  <div class="topbar__actions">
+    <a class="btn btn--ghost btn--sm" href="/" target="_blank" rel="noopener">View site &#8599;</a>
+    <form method="POST" action="/admin/logout" style="display:inline">
+      <input type="hidden" name="_csrf" value="<!--{{CSRF}}-->">
+      <button class="btn btn--ghost btn--sm" type="submit">Sign out</button>
+    </form>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab is-active" data-tab="services" type="button">Services</button>
+  <button class="tab" data-tab="pricing" type="button">Pricing</button>
+  <button class="tab" data-tab="bookings" type="button">Bookings <span class="pill" id="bookingCount" hidden>0</span></button>
+  <button class="tab" data-tab="settings" type="button">Settings</button>
+</nav>
+
+<main class="wrap">
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============================ SERVICES ============================ -->
+  <section class="panel is-active" id="panel-services">
+    <div class="panel__head">
+      <div>
+        <h2>Services</h2>
+        <p>These appear on the website and in the booking form dropdown.</p>
+      </div>
+      <button class="btn btn--primary" type="button" id="addService">+ Add service</button>
+    </div>
+    <div class="list" id="serviceList"><div class="loading">Loading…</div></div>
+  </section>
+
+  <!-- ============================ PRICING ============================= -->
+  <section class="panel" id="panel-pricing">
+    <div class="panel__head">
+      <div>
+        <h2>Pricing plans</h2>
+        <p>The three package cards in the Pricing section.</p>
+      </div>
+      <button class="btn btn--primary" type="button" id="addPlan">+ Add plan</button>
+    </div>
+    <div class="list" id="planList"><div class="loading">Loading…</div></div>
+  </section>
+
+  <!-- ============================ BOOKINGS ============================ -->
+  <section class="panel" id="panel-bookings">
+    <div class="panel__head">
+      <div>
+        <h2>Booking requests</h2>
+        <p>Every enquiry submitted through the website, newest first.</p>
+      </div>
+      <select id="bookingFilter" class="input input--auto">
+        <option value="">All statuses</option>
+        <option value="new">New</option>
+        <option value="contacted">Contacted</option>
+        <option value="done">Done</option>
+        <option value="spam">Spam</option>
+      </select>
+    </div>
+    <div class="list" id="bookingList"><div class="loading">Loading…</div></div>
+  </section>
+
+  <!-- ============================ SETTINGS ============================ -->
+  <section class="panel" id="panel-settings">
+    <div class="panel__head">
+      <div>
+        <h2>Business settings</h2>
+        <p>Phone number, contact details and where booking emails are sent.</p>
+      </div>
+    </div>
+
+    <form class="card" id="settingsForm">
+      <h3>Contact details</h3>
+      <div class="grid2">
+        <div class="field">
+          <label for="s-business_name">Business name</label>
+          <input class="input" id="s-business_name" name="business_name" type="text">
+        </div>
+        <div class="field">
+          <label for="s-tagline">Tagline</label>
+          <input class="input" id="s-tagline" name="tagline" type="text">
+        </div>
+        <div class="field">
+          <label for="s-phone">Phone number <small>(used by Call Now buttons)</small></label>
+          <input class="input" id="s-phone" name="phone" type="text" placeholder="919191">
+        </div>
+        <div class="field">
+          <label for="s-phone_text">Phone display text</label>
+          <input class="input" id="s-phone_text" name="phone_text" type="text">
+        </div>
+        <div class="field">
+          <label for="s-whatsapp">WhatsApp number <small>(blank hides the button)</small></label>
+          <input class="input" id="s-whatsapp" name="whatsapp" type="text">
+        </div>
+        <div class="field">
+          <label for="s-email">Public email address</label>
+          <input class="input" id="s-email" name="email" type="text">
+        </div>
+        <div class="field field--full">
+          <label for="s-address">Address</label>
+          <input class="input" id="s-address" name="address" type="text">
+        </div>
+        <div class="field field--full">
+          <label for="s-hours">Working hours</label>
+          <input class="input" id="s-hours" name="hours" type="text">
+        </div>
+      </div>
+
+      <h3>Booking emails</h3>
+      <div class="grid2">
+        <div class="field field--full">
+          <label for="s-mail_to">Send booking requests to <small>(comma separated)</small></label>
+          <input class="input" id="s-mail_to" name="mail_to" type="text">
+        </div>
+        <div class="field">
+          <label for="s-mail_subject_prefix">Subject prefix</label>
+          <input class="input" id="s-mail_subject_prefix" name="mail_subject_prefix" type="text">
+        </div>
+        <div class="field">
+          <label for="s-mail_send_customer_copy">Send confirmation to customer</label>
+          <select class="input" id="s-mail_send_customer_copy" name="mail_send_customer_copy">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="note" id="mailNote"></div>
+
+      <button class="btn btn--primary" type="submit">Save settings</button>
+    </form>
+  </section>
+
+</main>
+
+<!-- ============================== EDITOR ============================== -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__head">
+      <h3 id="modalTitle">Edit</h3>
+      <button class="icon-btn" type="button" data-close aria-label="Close">&times;</button>
+    </div>
+    <div class="modal__body" id="modalBody"></div>
+    <div class="modal__foot">
+      <button class="btn btn--ghost" type="button" data-close>Cancel</button>
+      <button class="btn btn--primary" type="button" id="modalSave">Save</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/admin.js" defer></script>
+</body>
+</html>

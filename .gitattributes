@@ -1,0 +1,5 @@
+# Normalise line endings so the Linux host gets LF regardless of the dev machine.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.woff2 binary

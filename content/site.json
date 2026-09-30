@@ -1,0 +1,359 @@
+{
+  "services": [
+    {
+      "id": "house-cleaning",
+      "title": "House Cleaning",
+      "description": "Regular upkeep for apartments and villas — dusting, mopping, bedrooms, living areas and balconies.",
+      "tag": "Most Booked",
+      "icon": "i-home",
+      "image": "/images/service-house-cleaning.jpg",
+      "imageAlt": "Tidy, freshly cleaned apartment living and dining area",
+      "features": [
+        "Dusting",
+        "Mopping",
+        "Bedrooms",
+        "Balcony"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹1,499"
+    },
+    {
+      "id": "deep-cleaning",
+      "title": "Deep Cleaning",
+      "description": "Top-to-bottom reset of the whole home — behind appliances, inside cabinets, grout, switches and fans.",
+      "tag": "Deep Clean",
+      "icon": "i-sparkle",
+      "image": "/images/service-deep-cleaning.jpg",
+      "imageAlt": "Gloved hand holding a spray cleaning bottle",
+      "features": [
+        "Degreasing",
+        "Grout",
+        "Cabinets",
+        "Fans"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹3,999"
+    },
+    {
+      "id": "water-tank-cleaning",
+      "title": "Water Tank Cleaning",
+      "description": "Mechanised de-silting and anti-bacterial treatment for overhead tanks and underground sumps.",
+      "tag": "Health First",
+      "icon": "i-waves",
+      "image": "/images/service-water-tank-cleaning.jpg",
+      "imageAlt": "Industrial water pipes and tank plumbing",
+      "features": [
+        "Vacuum de-silting",
+        "Anti-bacterial",
+        "Sump + Overhead"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹1,199"
+    },
+    {
+      "id": "office-cleaning",
+      "title": "Office Cleaning",
+      "description": "Daily, weekly or annual-contract housekeeping for workspaces, pantries, washrooms and meeting rooms.",
+      "tag": "AMC Available",
+      "icon": "i-building",
+      "image": "/images/service-office-cleaning.jpg",
+      "imageAlt": "Clean modern office interior with glass partitions",
+      "features": [
+        "Workstations",
+        "Pantry",
+        "Washrooms",
+        "Daily / AMC"
+      ],
+      "priceLabel": "Custom",
+      "priceValue": "AMC Plans"
+    },
+    {
+      "id": "hotel-resort-cleaning",
+      "title": "Hotel & Resort Cleaning",
+      "description": "Housekeeping support for rooms, lobbies, banquet halls and back-of-house — on rotating shifts.",
+      "tag": "24 × 7 Crew",
+      "icon": "i-bed",
+      "image": "/images/service-hotel-cleaning.jpg",
+      "imageAlt": "Hotel resort poolside with neatly arranged loungers",
+      "features": [
+        "Guest rooms",
+        "Lobby",
+        "Banquets",
+        "Shift crew"
+      ],
+      "priceLabel": "Quote",
+      "priceValue": "On Request"
+    },
+    {
+      "id": "special-event-cleaning",
+      "title": "Special & Event Cleaning",
+      "description": "Pre-event polish and post-event clear-up for parties, weddings, festivals and housewarmings.",
+      "tag": "Overnight OK",
+      "icon": "i-zap",
+      "image": "/images/service-event-cleaning.jpg",
+      "imageAlt": "Vacuum cleaner picking up party confetti from carpet",
+      "features": [
+        "Pre & post event",
+        "Festive",
+        "Overnight"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹2,499"
+    },
+    {
+      "id": "sofa-upholstery-cleaning",
+      "title": "Sofa & Upholstery Cleaning",
+      "description": "Deep foam-shampoo extraction that lifts dust mites, body oils and stains from fabric and leather.",
+      "tag": "Foam Wash",
+      "icon": "i-sofa",
+      "image": "/images/service-sofa-upholstery.jpg",
+      "imageAlt": "Freshly cleaned sofa in a styled living room",
+      "features": [
+        "Shampoo",
+        "Stain removal",
+        "Dry vacuum"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹699 / seat"
+    },
+    {
+      "id": "carpet-floor-care",
+      "title": "Carpet & Floor Care",
+      "description": "Carpet shampooing plus marble, granite and vitrified floor scrubbing, buffing and polishing.",
+      "tag": "Shine Restore",
+      "icon": "i-layers",
+      "image": "/images/service-carpet-floor-care.jpg",
+      "imageAlt": "Polished herringbone wooden floor in a bright living room",
+      "features": [
+        "Marble polish",
+        "Carpet shampoo",
+        "Buffing"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹999"
+    },
+    {
+      "id": "kitchen-deep-cleaning",
+      "title": "Kitchen Deep Cleaning",
+      "description": "Chimney, hob, tiles, cabinets and the greasy corners regular cleaning never quite reaches.",
+      "tag": "Degrease",
+      "icon": "i-kitchen",
+      "image": "/images/service-kitchen-cleaning.jpg",
+      "imageAlt": "Spotless white modern kitchen countertop",
+      "features": [
+        "Chimney",
+        "Cabinets",
+        "Backsplash"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹1,799"
+    },
+    {
+      "id": "bathroom-deep-cleaning",
+      "title": "Bathroom Deep Cleaning",
+      "description": "Hard-water descaling, tile and grout scrubbing, fittings polish and full sanitisation.",
+      "tag": "Descaling",
+      "icon": "i-bath",
+      "image": "/images/service-bathroom-cleaning.jpg",
+      "imageAlt": "Sparkling clean modern bathroom with glass shower",
+      "features": [
+        "Descaling",
+        "Tile & grout",
+        "Sanitised"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹899"
+    },
+    {
+      "id": "window-facade-cleaning",
+      "title": "Window & Facade Cleaning",
+      "description": "Streak-free glass, grills, tracks and mosquito mesh — including trained rope-access teams.",
+      "tag": "High-Rise",
+      "icon": "i-window",
+      "image": "/images/service-window-facade.jpg",
+      "imageAlt": "Modern house with large clean glass windows",
+      "features": [
+        "Glass",
+        "Grills",
+        "Tracks",
+        "Facade"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹1,299"
+    },
+    {
+      "id": "post-construction-cleaning",
+      "title": "Post-Construction Cleaning",
+      "description": "Debris clearing, cement and paint-splatter removal, then a full polish so the space is handover ready.",
+      "tag": "Heavy Duty",
+      "icon": "i-hardhat",
+      "image": "/images/service-post-construction.jpg",
+      "imageAlt": "Construction site workers on a building slab",
+      "features": [
+        "Debris",
+        "Paint marks",
+        "Final polish"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹4,999"
+    },
+    {
+      "id": "move-in-move-out-cleaning",
+      "title": "Move-In / Move-Out Cleaning",
+      "description": "A full empty-home clean so you get your deposit back — or walk into a genuinely fresh start.",
+      "tag": "Handover",
+      "icon": "i-truck",
+      "image": "/images/service-move-in-out.jpg",
+      "imageAlt": "Spacious empty living room ready for handover",
+      "features": [
+        "Empty home",
+        "Wardrobes",
+        "Deposit safe"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹3,499"
+    },
+    {
+      "id": "sanitisation-disinfection",
+      "title": "Sanitisation & Disinfection",
+      "description": "Electrostatic fogging with hospital-grade, food-safe disinfectant. Odour free and safe for kids and pets.",
+      "tag": "Hospital Grade",
+      "icon": "i-spray",
+      "image": "/images/service-sanitisation.jpg",
+      "imageAlt": "Gloved hand holding a disinfectant spray bottle",
+      "features": [
+        "Fogging",
+        "Touch points",
+        "Pet safe"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹1,099"
+    },
+    {
+      "id": "swimming-pool-cleaning",
+      "title": "Swimming Pool Cleaning",
+      "description": "Vacuuming, brushing, filter backwash and chemical balancing to keep water clear and swim-safe.",
+      "tag": "Weekly Plan",
+      "icon": "i-droplet",
+      "image": "/images/service-pool-cleaning.jpg",
+      "imageAlt": "Clean swimming pool at a resort during sunset",
+      "features": [
+        "Vacuuming",
+        "pH balance",
+        "Filter care"
+      ],
+      "priceLabel": "Starting at",
+      "priceValue": "₹2,999"
+    }
+  ],
+  "plans": [
+    {
+      "name": "Essential",
+      "description": "Routine upkeep for a tidy home.",
+      "currency": "₹",
+      "price": "1,499",
+      "period": "/ visit",
+      "featured": false,
+      "features": [
+        {
+          "text": "Dusting of all rooms",
+          "included": true
+        },
+        {
+          "text": "Sweeping & mopping",
+          "included": true
+        },
+        {
+          "text": "Bathroom surface clean",
+          "included": true
+        },
+        {
+          "text": "Kitchen counter & sink",
+          "included": true
+        },
+        {
+          "text": "Appliance interiors",
+          "included": false
+        },
+        {
+          "text": "Sofa shampooing",
+          "included": false
+        }
+      ],
+      "ctaLabel": "Choose Essential",
+      "ctaService": "House Cleaning"
+    },
+    {
+      "name": "Deep Clean",
+      "description": "The full reset, top to bottom.",
+      "currency": "₹",
+      "price": "3,999",
+      "period": "/ visit",
+      "featured": true,
+      "features": [
+        {
+          "text": "Everything in Essential",
+          "included": true
+        },
+        {
+          "text": "Kitchen degreasing & cabinets",
+          "included": true
+        },
+        {
+          "text": "Bathroom descaling & grout",
+          "included": true
+        },
+        {
+          "text": "Fans, lights & switchboards",
+          "included": true
+        },
+        {
+          "text": "Balcony & window glass",
+          "included": true
+        },
+        {
+          "text": "Sofa shampooing",
+          "included": false
+        }
+      ],
+      "ctaLabel": "Choose Deep Clean",
+      "ctaService": "Deep Cleaning"
+    },
+    {
+      "name": "Premium Care",
+      "description": "Deep clean plus specialist work.",
+      "currency": "₹",
+      "price": "6,499",
+      "period": "/ visit",
+      "featured": false,
+      "features": [
+        {
+          "text": "Everything in Deep Clean",
+          "included": true
+        },
+        {
+          "text": "Sofa & mattress shampooing",
+          "included": true
+        },
+        {
+          "text": "Floor polishing / buffing",
+          "included": true
+        },
+        {
+          "text": "Full-home sanitisation",
+          "included": true
+        },
+        {
+          "text": "Wardrobe interiors",
+          "included": true
+        },
+        {
+          "text": "Priority same-day slot",
+          "included": true
+        }
+      ],
+      "ctaLabel": "Choose Premium",
+      "ctaService": "Deep Cleaning"
+    }
+  ]
+}

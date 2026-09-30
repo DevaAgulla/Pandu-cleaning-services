@@ -1,0 +1,26 @@
+{
+  "name": "pandu-cleaning-services",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pandu Cleaning Services - professional cleaning services website with booking + email enquiry",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "set-admin-password": "node server/set-password.js",
+    "migrate": "node server/migrate.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "bcryptjs": "^3.0.3",
+    "cookie-session": "^2.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "nodemailer": "^10.0.10",
+    "pg": "^8.23.0"
+  }
+}

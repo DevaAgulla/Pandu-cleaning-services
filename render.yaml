@@ -1,0 +1,43 @@
+# Render blueprint - https://render.com/docs/blueprint-spec
+# Deploy with: New > Blueprint, point it at this repository.
+services:
+  - type: web
+    name: pandu-cleaning-services
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      # Paste your Neon connection string in the Render dashboard.
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_SSL
+        value: "true"
+
+      # Render generates a strong random value for the session cookie.
+      - key: SESSION_SECRET
+        generateValue: true
+
+      # Set these in the dashboard (never commit them).
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD_HASH
+        sync: false
+
+      # Mail settings
+      - key: MAIL_TRANSPORT
+        value: service
+      - key: MAIL_SERVICE
+        value: gmail
+      - key: MAIL_USER
+        sync: false
+      - key: MAIL_PASS
+        sync: false
+      - key: MAIL_FROM
+        sync: false
+      - key: MAIL_TO
+        sync: false
