@@ -56,6 +56,14 @@ app.get('/api/config', async (req, res) => {
   }
 });
 
+// Liveness probe for the host (Render's "Health Check Path").
+// Deliberately does NOT touch the database: a health check should report whether
+// this process is up, and hitting Postgres on every ping would keep a sleeping
+// serverless database awake for no reason.
+app.get('/healthz', (req, res) => {
+  res.json({ ok: true, uptime: Math.round(process.uptime()), env: config.env });
+});
+
 app.get('/api/mail-health', async (req, res) => {
   try {
     const result = await verifyTransport();
